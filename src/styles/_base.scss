@@ -1,0 +1,102 @@
+/*
+   ====================================
+   Base
+   ====================================
+*/
+
+* {
+    position: relative;
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+    color: inherit;
+    font-weight: inherit;
+    font-size: inherit;
+    font-family: inherit;
+    line-height: inherit;
+}
+
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+html {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    box-sizing: border-box;
+    font-weight: $font-weight;
+    font-style: normal;
+    font-size: $font-size-base;
+    font-family: $font-family;
+}
+
+body {
+    color: $color;
+    background-color: $background-color;
+}
+
+/*
+   ====================================
+   Colors
+   ====================================
+*/
+
+.color--yellow { color: $yellow !important; }
+.color--orange { color: $orange !important; }
+.color--red { color: $red !important; }
+.color--green { color: $green !important; }
+.color--purple { color: $purple !important; }
+.color--blue { color: $blue !important; }
+.color--turquoise { color: $turquoise !important; }
+
+.bg--yellow { background-color: $yellow; }
+.bg--orange { background-color: $orange; }
+.bg--red { background-color: $red; }
+.bg--green { background-color: $green; }
+.bg--purple { background-color: $purple; }
+.bg--blue { background-color: $blue; }
+.bg--turquoise { background-color: $turquoise; }
+
+/*
+   ====================================
+   Helpers
+   ====================================
+*/
+.h-background-icon {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    background-size: calc(5vh + 5vw);
+    background-repeat: no-repeat;
+    opacity: .2;
+}
+
+.h-icon {
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+    background-position: center;
+    background-size: 1em;
+    background-repeat: no-repeat;
+    content: '';
+    vertical-align: middle;
+}
+
+.h-ellipsis {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.h-hidden {
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+}
