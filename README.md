@@ -34,6 +34,4 @@ This framework uses the [spatie.be](https://github.com/spatie/dashboard.spatie.b
 
 ## License
 
-Copyright © 2017 Matt Brialsford
-
-Licensed under the [MIT License](LICENSE)
+Copyright © 2017 Matt Brialsford. Licensed under the [MIT License](LICENSE)
