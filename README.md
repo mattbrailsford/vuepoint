@@ -28,6 +28,11 @@ npm run build
 * Indicator - An true/false indicator
 * Time and Weather - A time and weather display ([From the spatie.be repo](https://github.com/spatie/dashboard.spatie.be/blob/master/resources/assets/js/components/TimeWeather.vue))
 
+## Helper Components
+
+* Percentile Value - Show an up / down percentile change of value
+* Animated Number - Animates a number change
+
 ## Acknowledgements
 
 This framework uses the [spatie.be](https://github.com/spatie/dashboard.spatie.be) dashboard framework as it's starting point, using the same "spreadsheet" style grid layout system. 
