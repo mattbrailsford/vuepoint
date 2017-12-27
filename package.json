@@ -1,6 +1,6 @@
 {
-  "name": "dashboard",
-  "description": "A Vue.js project",
+  "name": "vuepoint",
+  "description": "A vuejs based dashboard framework",
   "version": "1.0.0",
   "author": "mattbrailsford <me@mattbrailsford.com>",
   "license": "MIT",
