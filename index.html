@@ -10,42 +10,7 @@
     <style>body { background-color: #21243f; }</style>
   </head>
   <body>
-    <dashboard id="dashboard" columns="5" rows="8">
-      <time-weather-tile position="a1:a2" heading="Barnsley" color="blue"
-        date-format="ddd DD/MM" 
-        time-zone="Europe/London" 
-        weather-city="Barnsley">
-      </time-weather-tile>
-      <indicator-tile position="a3" value="true" color="green" label="Living room lights"></indicator-tile>
-      <indicator-tile position="a4" value="true" color="blue" label="Garage lights"></indicator-tile>
-      <indicator-tile position="a5" value="false" color="red" label="Garage door open"></indicator-tile>
-
-      <value-tile position="b1:b2" heading="Temperature" color="yellow"
-        :value="temperature" decimal-places="2" unit="°C">
-        <percentile-change slot="after" :value="temperature"></percentile-change>
-      </value-tile> 
-      <sparkline-tile position="b3" :value="temperature" samples="50"></sparkline-tile>
-      <gauge-tile position="b4:b5" color="yellow" 
-        :value="temperature" max="30"
-        decimal-places="2" unit="°C"></gauge-tile>
-
-      <battery-tile position="c1:c2" heading="Battery" color="green"
-        :value="battery">
-      </battery-tile>
-      <sparkline-tile position="c3" :value="battery" samples="50"></sparkline-tile>
-      <gauge-tile position="c4:c5" color="green" 
-        :value="battery" max="100" unit="%"></gauge-tile>
-
-      <list-tile position="d1:d5" heading="Something" color="red" :values="listData"></list-tile> 
-
-      <value-tile position="e1:e2" heading="SNR" color="orange"
-        :value="snr" unit="dB"></value-tile>
-      <chart-tile position="e3:e5" :data="chartData3" type="doughnut"></chart-tile>
-
-      <chart-tile position="a6:c8" heading="Something" color="red" :data="chartData1" type="bar"></chart-tile>
-      <chart-tile position="d6:e8" heading="Something" color="blue" :data="chartData1" type="line"></chart-tile>
-      
-    </dashboard>
+    <div id="app"></div>
     <script src="js/app.js"></script>
   </body>
 </html>

@@ -21,6 +21,7 @@
     "moment-timezone": "^0.5.14",
     "vue": "^2.5.11",
     "vue-chartjs": "^3.0.2",
+    "vuex": "^3.0.1",
     "zepto": "^1.2.0"
   },
   "browserslist": [
