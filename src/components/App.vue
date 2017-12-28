@@ -47,11 +47,11 @@
     import PercentileChange from './atoms/PercentileChange';
     import Weather from './atoms/Weather';
 
-    import ValueTile from './molecules/ValueTile';
-    import ListTile from './molecules/ListTile';
-    import SparklineTile from './molecules/SparklineTile';
-    import GaugeTile from './molecules/GaugeTile';
-    import ChartTile from './molecules/ChartTile';
+    import ValueTile from './ValueTile';
+    import ListTile from './ListTile';
+    import SparklineTile from './SparklineTile';
+    import GaugeTile from './GaugeTile';
+    import ChartTile from './ChartTile';
     import IndicatorTile from './IndicatorTile';
     import BatteryTile from './BatteryTile';
 

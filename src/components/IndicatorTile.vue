@@ -9,7 +9,7 @@
 
 <script>
     import Tile from './atoms/Tile';
-    import ValueTile from './molecules/ValueTile';
+    import ValueTile from './ValueTile';
 
     export default {
 
