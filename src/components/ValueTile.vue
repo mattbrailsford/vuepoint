@@ -18,7 +18,6 @@
 
 <script>
     import Tile from './atoms/Tile';
-    import AnimatedNumber from './atoms/AnimatedNumber';
 
     export default {
 
