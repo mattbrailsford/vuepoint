@@ -1,11 +1,12 @@
 <template>
     <dashboard columns="5" rows="8">
 
-        <time-weather-tile position="a1:a2" heading="Barnsley" color="blue"
-          date-format="ddd DD/MM" 
-          time-zone="Europe/London" 
-          weather-city="Barnsley">
-        </time-weather-tile>
+        <value-tile position="a1:a2" heading="Barnsley" color="blue">
+            <date-time slot="before" format="ddd DD/MM" time-zone="Europe/London"></date-time>
+            <date-time slot="value" format="HH:mm" time-zone="Europe/London"></date-time>
+            <weather slot="after" city="Barnsley"></weather>
+        </value-tile> 
+
         <indicator-tile position="a3" value="true" color="green" label="Living room lights"></indicator-tile>
         <indicator-tile position="a4" value="true" color="blue" label="Garage lights"></indicator-tile>
         <indicator-tile position="a5" value="false" color="red" label="Garage door open"></indicator-tile>
@@ -42,7 +43,10 @@
 
     import Dashboard from './Dashboard';
 
+    import DateTime from './atoms/DateTime';
     import PercentileChange from './atoms/PercentileChange';
+    import Weather from './atoms/Weather';
+
     import ValueTile from './molecules/ValueTile';
     import ListTile from './molecules/ListTile';
     import SparklineTile from './molecules/SparklineTile';
@@ -50,13 +54,16 @@
     import ChartTile from './molecules/ChartTile';
     import IndicatorTile from './IndicatorTile';
     import BatteryTile from './BatteryTile';
-    import TimeWeatherTile from './TimeWeatherTile';
+
+    import { mapState, mapActions } from 'vuex'
 
     export default {
 
         components: {
             Dashboard,
+            DateTime,
             PercentileChange,
+            Weather,
             ValueTile,
             ListTile,
             SparklineTile,
@@ -64,7 +71,6 @@
             ChartTile,
             IndicatorTile,
             BatteryTile,
-            TimeWeatherTile,
         },
 
         data(){
@@ -86,9 +92,22 @@
             }
         },
 
+        computed: {
+            ...mapState('ttn', {
+                'ttnSamples': state => state.samples
+            })
+        },
+
         created() {
 
             var self = this;
+
+            /*self.getTtnSamples({
+                appId: "mb_env_01", 
+                deviceId: "mb_lora32u4_bme680_01", 
+                accessKey: "ttn-account-v2.WTj-u7HkISPqQhoBGoiQSoFKdzk_8oaLFWi_rHf2iQM", 
+                last: "30d"
+            });*/
             
             // Temperature
             setInterval(function(){
@@ -134,6 +153,12 @@
             }
 
         },
+
+        methods: {
+            ...mapActions('ttn', {
+                'getTtnSamples': 'getSamples'
+            })
+        }
     };
 
 </script>

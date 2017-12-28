@@ -26,10 +26,11 @@ npm run build
 * Chart - A line, bar or doughnut chart
 * Sparkline - A spirkline style chart
 * Indicator - An true/false indicator
-* Time and Weather - A time and weather display ([From the spatie.be repo](https://github.com/spatie/dashboard.spatie.be/blob/master/resources/assets/js/components/TimeWeather.vue))
 
 ## Helper Components
 
+* Date Time - A date time value (updates every 1 second)
+* Weather - Outputs the temperature / icon of a city (updates every 15 minutes)
 * Percentile Value - Show an up / down percentile change of value
 * Animated Number - Animates a number change
 
