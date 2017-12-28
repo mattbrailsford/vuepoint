@@ -4,9 +4,9 @@
         <span slot="before">{{date.toUpperCase()}}</span>
         <span slot="value">{{time}}</span>
         <span slot="after" class="time-weather__weather">
-            <span class="time-weather__weather__temperature">{{ weather.temperature }}</span>
+            <span class="time-weather__weather__temperature">{{ temperature }}</span>
             <span class="time-weather__weather__description">
-                <i class="wi" :class="weather.iconClass"></i>
+                <i class="wi" :class="weatherIconCssClass"></i>
             </span>
         </span>
 
@@ -17,7 +17,9 @@
     import Tile from './atoms/Tile';
     import ValueTile from './molecules/ValueTile';
     import moment from 'moment-timezone';
-    import weather from '../services/weather/Weather';
+
+    import { createNamespacedHelpers } from 'vuex'
+    const { mapState, mapActions } = createNamespacedHelpers('weather')
 
     export default {
 
@@ -47,12 +49,28 @@
         data() {
             return {
                 date: '',
-                time: '',
-                weather: {
-                    temperature: '',
-                    iconClass: '',
-                },
+                time: ''
             };
+        },
+
+        computed: {
+            ...mapState({
+                conditions: state => state.conditions
+            }),
+            temperature(){
+                if (this.conditions.hasOwnProperty(this.weatherCity)){
+                    return this.conditions[this.weatherCity].temp;
+                } else {
+                    return 0;
+                }
+            },
+            weatherIconCssClass(){
+                if (this.conditions.hasOwnProperty(this.weatherCity)){
+                    return `wi-yahoo-${this.conditions[this.weatherCity].code}`;
+                } else {
+                    return "";
+                }
+            }
         },
 
         created() {
@@ -64,16 +82,15 @@
         },
 
         methods: {
+            ...mapActions(['getConditions']),
+
             refreshTime() {
                 this.date = moment().tz(this.timeZone).format(this.dateFormat);
                 this.time = moment().tz(this.timeZone).format(this.timeFormat);
             },
 
-            async fetchWeather() {
-                const conditions = await weather.conditions(this.weatherCity);
-
-                this.weather.temperature = conditions.temp;
-                this.weather.iconClass = `wi-yahoo-${conditions.code}`;
+            fetchWeather() {
+                this.getConditions(this.weatherCity);
             },
         },
     };
