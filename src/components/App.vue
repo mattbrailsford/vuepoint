@@ -55,8 +55,6 @@
     import IndicatorTile from './IndicatorTile';
     import BatteryTile from './BatteryTile';
 
-    import { mapState, mapActions } from 'vuex'
-
     export default {
 
         components: {
@@ -92,22 +90,9 @@
             }
         },
 
-        computed: {
-            ...mapState('ttn', {
-                'ttnSamples': state => state.samples
-            })
-        },
-
         created() {
 
             var self = this;
-
-            /*self.getTtnSamples({
-                appId: "mb_env_01", 
-                deviceId: "mb_lora32u4_bme680_01", 
-                accessKey: "ttn-account-v2.WTj-u7HkISPqQhoBGoiQSoFKdzk_8oaLFWi_rHf2iQM", 
-                last: "30d"
-            });*/
             
             // Temperature
             setInterval(function(){
@@ -153,12 +138,6 @@
             }
 
         },
-
-        methods: {
-            ...mapActions('ttn', {
-                'getTtnSamples': 'getSamples'
-            })
-        }
     };
 
 </script>

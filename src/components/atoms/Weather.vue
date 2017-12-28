@@ -9,7 +9,9 @@
 
 <script>
 
-    import weatherService from '../../services/Weather';
+    import WeatherService from '../../services/WeatherService';
+
+    const weatherService = new WeatherService();
 
     export default {
 
