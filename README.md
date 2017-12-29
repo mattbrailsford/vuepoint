@@ -1,6 +1,6 @@
 # Vuepoint
 
-A vuejs based dashboard framework
+A vuejs based dashboard framework. [Demo](https://mattbrailsford.github.io/vuepoint/index.html)
 
 ![Screenshot](img/screenshot.png)
 
