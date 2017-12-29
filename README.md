@@ -25,7 +25,7 @@ npm run build
 * Gauage - A gauge display
 * Chart - A line, bar or doughnut chart
 * Sparkline - A spirkline style chart
-* Indicator - An true/false indicator
+* Indicator - A true/false indicator
 
 ## Helper Components
 
