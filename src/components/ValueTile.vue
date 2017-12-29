@@ -25,7 +25,6 @@
 
         components: {
             Tile,
-            AnimatedNumber,
         },
 
         props: {
