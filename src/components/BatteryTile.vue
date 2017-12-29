@@ -11,7 +11,6 @@
 
 <script>
     import Tile from './atoms/Tile';
-    import AnimatedNumber from './atoms/AnimatedNumber';
     import ValueTile from './ValueTile';
 
     export default {
@@ -19,7 +18,6 @@
         extends: Tile,
 
         components: {
-            AnimatedNumber,
             ValueTile,
         },
 
