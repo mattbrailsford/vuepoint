@@ -1,7 +1,7 @@
 <script>
     import { Doughnut } from 'vue-chartjs'
-    import { defaultsDeep } from 'lodash'
     import { cssColor } from '../../helpers'
+    import deepAssign from 'deep-assign'
 
     const chartOptions = {
         responsive: true, 
@@ -79,7 +79,7 @@
                             data: values
                         }
                     ]
-                }, defaultsDeep({}, chartOptions, {
+                }, deepAssign({}, chartOptions, {
                     animation: {
                         onComplete: function(anim){
                             var ctx = anim.animationObject.chart.ctx;

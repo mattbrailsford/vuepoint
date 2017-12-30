@@ -1,6 +1,5 @@
 <script>
     import { Line } from 'vue-chartjs'
-    import { map } from 'lodash'
 
     const chartOptions = {
         responsive: true, 

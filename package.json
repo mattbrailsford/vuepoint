@@ -15,7 +15,7 @@
     "babel-polyfill": "^6.26.0",
     "chart.js": "^2.7.1",
     "chart.piecelabel.js": "^0.9.0",
-    "lodash": "^4.17.4",
+    "deep-assign": "^2.0.0",
     "moment": "~2.18.0",
     "moment-timezone": "^0.5.14",
     "vue": "^2.5.11",

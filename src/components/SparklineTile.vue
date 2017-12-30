@@ -7,7 +7,6 @@
 <script>
     import Tile from './atoms/Tile';
     import SparklineChart from './charts/SparklineChart'
-    import { takeRight } from 'lodash'
 
     export default {
 
@@ -37,7 +36,7 @@
             value(newValue){
                 this.values.push(newValue);
                 if (this.values.length > this.samples){
-                    this.values = takeRight(this.values, this.samples);
+                    this.values = this.values.splice(this.values.length - this.samples);
                 }
             }
         }

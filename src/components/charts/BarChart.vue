@@ -1,6 +1,6 @@
 <script>
     import { Bar } from 'vue-chartjs'
-    import { forEach, defaultsDeep } from 'lodash'
+    import deepAssign from 'deep-assign'
 
     const chartOptions = {
         responsive: true, 
@@ -70,10 +70,10 @@
         computed: {
             chartData() {
 
-                var newData = defaultsDeep({}, this.data);
+                var newData = deepAssign({}, this.data);
 
                 if (newData.datasets){
-                    forEach(newData.datasets, function(ds){
+                    newData.datasets.forEach(function(ds){
                         ds.borderColor = ds.color;
                         ds.backgroundColor = ds.color;
                         ds.borderWidth = 2;
@@ -88,7 +88,7 @@
         created() {
 
             var self = this;
-            var opts = defaultsDeep({}, chartOptions, this.options || {});
+            var opts = deepAssign({}, chartOptions, this.options || {});
 
             self.drawChart = function(){
                 self.renderChart(self.chartData, opts); 
