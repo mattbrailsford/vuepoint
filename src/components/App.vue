@@ -26,7 +26,8 @@
         <level-tile position="e3:e5" color="yellow" label="Temperature" max="30" :value="temperature" unit="°C"></level-tile>
         <level-tile position="f3:f5" color="green" label="Battery" min="0" max="100" :value="battery" unit="%"></level-tile>
 
-        <list-tile position="g1:h5" heading="Something" color="red" :values="listData"></list-tile> 
+        <list-tile position="g1:h3" heading="Something" color="red" :values="listData"></list-tile> 
+        <text-tile position="g4:h5" value="Lorem ipsum dolar sit amet consectetur adipiscing elit"></text-tile>
 
         <value-tile position="i1:j2" heading="SNR" color="orange"
           :value="snr" unit="dB">
@@ -62,6 +63,7 @@
     import IndicatorTile from './IndicatorTile';
     import BatteryTile from './BatteryTile';
     import LevelTile from './LevelTile';
+    import TextTile from './TextTile';
 
     export default {
 
@@ -82,6 +84,7 @@
             IndicatorTile,
             BatteryTile,
             LevelTile,
+            TextTile,
         },
 
         data(){

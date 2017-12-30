@@ -20,6 +20,7 @@ npm run build
 ## Supported Tiles
 
 * Value - Simple numeric value with before / after text
+* Text - Text / html value tile
 * List - List of label and value items
 * Battery - A battery level indicator
 * Gauage - A gauge display
