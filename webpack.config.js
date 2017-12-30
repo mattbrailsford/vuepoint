@@ -92,6 +92,8 @@ if (process.env.NODE_ENV === 'production') {
   module.exports.devtool = '#source-map'
   // http://vue-loader.vuejs.org/en/workflow/production.html
   module.exports.plugins = (module.exports.plugins || []).concat([
+    // load `moment/locale/ja.js` and `moment/locale/it.js`
+    new webpack.ContextReplacementPlugin(/moment[\/\\]locale$/, /uk|en-gb/),
     new webpack.DefinePlugin({
       'process.env': {
         NODE_ENV: '"production"'
