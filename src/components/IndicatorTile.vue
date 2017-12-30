@@ -56,6 +56,9 @@
 
     .indicator .value-tile__value__suffix {
         vertical-align: middle;
+        overflow:hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
     }
 
 </style>

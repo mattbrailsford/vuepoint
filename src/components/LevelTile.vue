@@ -1,7 +1,7 @@
 <template>
     <tile :position="position" :heading="heading" :color="color">
        <div class="level-tile">
-           <div class="level-tile__heading" v-if="label">{{label}}</div>
+           <div class="level-tile__label" v-if="label">{{label}}</div>
            <div class="level-tile__bar"><span :class="barCssClass" :style="barCssStyle"></span></div>
            <div class="level-tile__value">{{value.toFixed(decimalPlaces)}}{{unit}}</div>
        </div>
@@ -70,10 +70,11 @@
         align-self: stretch;
     }
 
-    .level-tile__heading {
+    .level-tile__label {
         overflow:hidden;
         text-overflow: ellipsis;
         padding-bottom: 1vw;
+        font-size: $font-size-s;
     }
 
     .level-tile__bar {

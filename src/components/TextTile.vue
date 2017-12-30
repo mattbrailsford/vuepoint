@@ -32,6 +32,7 @@
         align-self: stretch;
         width: 100%;
         flex: 1 0 100%;
+        font-size: $font-size-s;
     }
 
 </style>

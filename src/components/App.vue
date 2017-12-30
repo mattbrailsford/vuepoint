@@ -9,7 +9,7 @@
 
         <indicator-tile position="a3:b3" value="true" color="green" label="Living room lights"></indicator-tile>
         <indicator-tile position="a4:b4" value="true" color="blue" label="Garage lights"></indicator-tile>
-        <indicator-tile position="a5:b5" value="false" color="red" label="Garage door open"></indicator-tile>
+        <indicator-tile position="a5:b5" value="false" color="red" label="Garage door is open"></indicator-tile>
 
         <value-tile position="c1:d2" heading="Temperature" color="yellow"
           :value="temperature" decimal-places="2" unit="°C">
