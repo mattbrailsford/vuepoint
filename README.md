@@ -23,6 +23,7 @@ npm run build
 * List - List of label and value items
 * Battery - A battery level indicator
 * Gauage - A gauge display
+* Level - A vertical level display
 * Chart - A line, bar or doughnut chart
 * Sparkline - A spirkline style chart
 * Indicator - A true/false indicator

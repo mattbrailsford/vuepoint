@@ -1,5 +1,5 @@
 <template>
-    <span>{{ avgValue.toFixed(decimalPlaces) }}</span>
+    <span v-if="avgValue != undefined">{{ avgValue.toFixed(decimalPlaces) }}</span>
 </template>
 
 <script>

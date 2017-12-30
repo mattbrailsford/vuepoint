@@ -1,5 +1,5 @@
 <template>
-    <span>{{ maxValue.toFixed(decimalPlaces) }}</span>
+    <span v-if="maxValue != undefined">{{ maxValue.toFixed(decimalPlaces) }}</span>
 </template>
 
 <script>

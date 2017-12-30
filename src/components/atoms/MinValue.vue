@@ -1,5 +1,5 @@
 <template>
-    <span>{{ minValue.toFixed(decimalPlaces) }}</span>
+    <span v-if="minValue != undefined">{{ minValue.toFixed(decimalPlaces) }}</span>
 </template>
 
 <script>

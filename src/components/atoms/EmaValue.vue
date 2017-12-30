@@ -1,5 +1,5 @@
 <template>
-    <span>{{ emaValue.toFixed(decimalPlaces) }}</span>
+    <span v-if="emaValue != undefined">{{ emaValue.toFixed(decimalPlaces) }}</span>
 </template>
 
 <script>
