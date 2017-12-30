@@ -8,7 +8,7 @@
 </template>
 
 <script>
-    import { addClassModifiers, positionToGridAreaNotation } from '../../helpers';
+    import { positionToGridAreaNotation } from '../../helpers';
 
     export default {
 

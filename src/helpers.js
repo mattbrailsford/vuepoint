@@ -1,14 +1,5 @@
 import moment from 'moment';
 
-export function guid(){
-    function s4() {
-        return Math.floor((1 + Math.random()) * 0x10000)
-            .toString(16)
-            .substring(1);
-    }
-    return s4() + s4() + '-' + s4() + '-' + s4() + '-' + s4() + '-' + s4() + s4() + s4();
-}
-
 export function cssColor(name){
     var body = document.getElementsByTagName("body")[0];
     var el = document.createElement("span");
@@ -18,28 +9,6 @@ export function cssColor(name){
     var color = style.getPropertyValue('background-color');
     body.removeChild(el);
     return color;
-}
-
-export function formatNumber(value) {
-    if (! value) {
-        return 0;
-    }
-
-    return value.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ' ');
-}
-
-export function addClassModifiers(base, modifiers = []) {
-    if (! Array.isArray(modifiers)) {
-        modifiers = modifiers.split(' ');
-    }
-
-    modifiers = modifiers.map(modifier => `${base}--${modifier}`);
-
-    return [base, ...modifiers];
-}
-
-export function formatDuration(start) {
-    return moment.duration(moment().diff(start), 'milliseconds').format('d[d] h[h] m[m]');
 }
 
 export function relativeDate(value) {
@@ -92,10 +61,6 @@ export function relativeDateTime(value) {
     }
 
     return 'Just now';
-}
-
-export function diffInSeconds(otherMoment) {
-    return moment().diff(otherMoment, 'seconds');
 }
 
 export function positionToGridAreaNotation(position) {
