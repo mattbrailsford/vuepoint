@@ -32,6 +32,10 @@ npm run build
 * Date Time - A date time value (updates every 1 second)
 * Weather - Outputs the temperature / icon of a city (updates every 15 minutes)
 * Percentile Value - Show an up / down percentile change of value
+* Min Value - Tracks the minimum value of passed readings
+* Max Value - Tracks the maximum value of passed readings
+* Avg Value - Calculate an average value of passed readings
+* Ema Value - Exponential moving average of passed readings
 * Animated Number - Animates a number change
 
 ## Acknowledgements

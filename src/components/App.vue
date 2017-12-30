@@ -30,7 +30,11 @@
         <list-tile position="d1:d5" heading="Something" color="red" :values="listData"></list-tile> 
 
         <value-tile position="e1:e2" heading="SNR" color="orange"
-          :value="snr" unit="dB"></value-tile>
+          :value="snr" unit="dB">
+            <span slot="after">
+                <i class="fa fa-caret-down color--white"></i> <min-value :value="snr"></min-value> &nbsp;|&nbsp; <i class="fa fa-caret-up color--white"></i> <max-value :value="snr"></max-value> &nbsp;|&nbsp; <i class="fa fa-sort color--white"></i> <ema-value :value="snr"></ema-value> 
+            </span>
+        </value-tile>
         <chart-tile position="e3:e5" :data="chartData3" type="doughnut"></chart-tile>
 
         <chart-tile position="a6:c8" heading="Something" color="red" :data="chartData1" type="bar"></chart-tile>
@@ -45,6 +49,10 @@
 
     import DateTime from './atoms/DateTime';
     import PercentileChange from './atoms/PercentileChange';
+    import MinValue from './atoms/MinValue';
+    import MaxValue from './atoms/MaxValue';
+    import AvgValue from './atoms/AvgValue';
+    import EmaValue from './atoms/EmaValue';
     import Weather from './atoms/Weather';
 
     import ValueTile from './ValueTile';
@@ -61,6 +69,10 @@
             Dashboard,
             DateTime,
             PercentileChange,
+            MinValue,
+            MaxValue,
+            AvgValue,
+            EmaValue,
             Weather,
             ValueTile,
             ListTile,
