@@ -1,6 +1,5 @@
 <template>
-    <value-tile :position="position" :heading="heading" :color="color"
-        :before="before" :after="after">
+    <value-tile :position="position" :heading="heading" :color="color">
         <span slot="value" class="indicator" :class="{ 'with-label': !!label }">
             <i class="fa" :class="iconCssClass"></i> <span class="value-tile__value__suffix" v-if="label">{{ label }}</span>
         </span>
