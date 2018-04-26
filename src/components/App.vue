@@ -109,7 +109,7 @@
         created() {
 
             var self = this;
-            
+
             // Temperature
             setInterval(function(){
                 self.temperature = Math.random() * 30;

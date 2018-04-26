@@ -3,7 +3,7 @@
     import deepAssign from 'deep-assign'
 
     const chartOptions = {
-        responsive: true, 
+        responsive: true,
         maintainAspectRatio: false,
 
         layout: {
@@ -28,11 +28,11 @@
                 scaleLabel: {
                     fontColor: 'white'
                 },
-                gridLines: { 
+                gridLines: {
                     /*display: true,
                     zeroLineWidth: 1,
                     zeroLineColor: "rgba(255,255,255,.25)" ,*/
-                    color: "rgba(255,255,255,.1)" 
+                    color: "rgba(255,255,255,.1)"
                 },
                 ticks: { fontColor: "white" }
             }],
@@ -40,11 +40,11 @@
                 scaleLabel: {
                     fontColor: 'white'
                 },
-                gridLines: { 
+                gridLines: {
                     /*display: true,
                     zeroLineWidth: 1,
                     zeroLineColor: "rgba(255,255,255,.25)" ,*/
-                    color: "rgba(255,255,255,.1)" 
+                    color: "rgba(255,255,255,.1)"
                 },
                 ticks: { fontColor: "white" }
             }]
@@ -62,7 +62,7 @@
             enabled: false
         },
         events: []
-        
+
     }
 
     export default {
@@ -96,7 +96,7 @@
             var opts = deepAssign({}, chartOptions, this.options || {});
 
             self.drawChart = function(){
-                self.renderChart(self.chartData, opts); 
+                self.renderChart(self.chartData, opts);
             }
 
             self.handleResize = function(){

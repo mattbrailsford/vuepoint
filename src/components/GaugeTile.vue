@@ -1,7 +1,7 @@
 <template>
     <tile :position="position" :heading="heading" :color="color">
-        <gauge-chart class="chart" :value="value" 
-            :min="min" :max="max" 
+        <gauge-chart class="chart" :value="value"
+            :min="min" :max="max"
             :decimalPlaces="decimalPlaces" :title="unit"
             :color="color"></gauge-chart>
     </tile>

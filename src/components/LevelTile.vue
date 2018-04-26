@@ -65,7 +65,7 @@
         display: flex;
         flex-direction: column;
         text-align: center;
-        width: 100%;    
+        width: 100%;
         flex: 1 0 100%;
         align-self: stretch;
     }

@@ -16,7 +16,7 @@
                 type: String,
             }
         },
-        
+
         data() {
             return {
                 value: ''

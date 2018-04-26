@@ -5,7 +5,7 @@
     require('chart.piecelabel.js');
 
     const chartOptions = {
-        responsive: true, 
+        responsive: true,
         maintainAspectRatio: false,
 
         cutoutPercentage: 40,
@@ -40,7 +40,7 @@
             enabled: false
         },
         events: []
-        
+
     }
 
     export default {
@@ -72,7 +72,7 @@
             var opts = deepAssign({}, chartOptions, this.options || {});
 
             self.drawChart = function(){
-                self.renderChart(self.chartData, opts); 
+                self.renderChart(self.chartData, opts);
             }
 
             self.handleResize = function(){
