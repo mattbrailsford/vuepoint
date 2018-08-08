@@ -46,7 +46,7 @@
                     return "color--yellow";
                 } else {
                     return "color--green";
-                }                
+                }
             }
         }
 

@@ -14,7 +14,7 @@
                 default: 0
             }
         },
-        
+
         data() {
             return {
                 avgValue: undefined,

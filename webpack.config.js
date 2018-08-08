@@ -7,6 +7,7 @@ module.exports = {
   entry: './src/app.js',
   output: {
     path: path.resolve(__dirname, 'js'),
+    publicPath: '/js',
     filename: 'app.js'
   },
   module: {

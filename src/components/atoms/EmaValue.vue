@@ -18,7 +18,7 @@
                 default: 0
             }
         },
-        
+
         data() {
             return {
                 emaValue: undefined

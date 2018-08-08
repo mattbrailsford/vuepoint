@@ -80,5 +80,3 @@ function indexInAlphabet(character) {
     const index = character.toLowerCase().charCodeAt(0) - 96;
     return index < 1 ? 1 : index;
 }
-
-

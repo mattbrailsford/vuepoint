@@ -5,41 +5,41 @@
             <date-time slot="before" format="ddd DD/MM" time-zone="Europe/London"></date-time>
             <date-time slot="value" format="HH:mm" time-zone="Europe/London"></date-time>
             <weather slot="after" city="Barnsley"></weather>
-        </value-tile> 
+        </value-tile>
 
-        <indicator-tile position="a3:b3" value="true" color="green" label="Living room lights"></indicator-tile>
-        <indicator-tile position="a4:b4" value="true" color="blue" label="Garage lights"></indicator-tile>
-        <indicator-tile position="a5:b5" value="false" color="red" label="Garage door is open"></indicator-tile>
+        <indicator-tile position="a3:b3" :value="true" color="green" label="Living room lights"></indicator-tile>
+        <indicator-tile position="a4:b4" :value="true" color="blue" label="Garage lights"></indicator-tile>
+        <indicator-tile position="a5:b5" :value="false" color="red" label="Garage door is open"></indicator-tile>
 
         <value-tile position="c1:d2" heading="Temperature" color="yellow"
-          :value="temperature" decimal-places="2" unit="°C">
+          :value="temperature" :decimal-places="2" unit="°C">
           <percentile-change slot="after" :value="temperature"></percentile-change>
-        </value-tile> 
-        <sparkline-tile position="c3:d3" :value="temperature" samples="50"></sparkline-tile>
-        <gauge-tile position="c4:d5" color="yellow" 
-          :value="temperature" max="30"
-          decimal-places="2" unit="°C"></gauge-tile>
+        </value-tile>
+        <sparkline-tile position="c3:d3" :value="temperature" :samples="50"></sparkline-tile>
+        <gauge-tile position="c4:d5" color="yellow"
+          :value="temperature" :max="30"
+          :decimal-places="2" unit="°C"></gauge-tile>
 
         <battery-tile position="e1:f2" heading="Battery" color="green"
           :value="battery">
         </battery-tile>
-        <level-tile position="e3:e5" color="yellow" label="Temperature" max="30" :value="temperature" unit="°C"></level-tile>
-        <level-tile position="f3:f5" color="green" label="Battery" min="0" max="100" :value="battery" unit="%"></level-tile>
+        <level-tile position="e3:e5" color="yellow" label="Temperature" :max="30" :value="temperature" unit="°C"></level-tile>
+        <level-tile position="f3:f5" color="green" label="Battery" :min="0" :max="100" :value="battery" unit="%"></level-tile>
 
-        <list-tile position="g1:h3" heading="Something" color="red" :values="listData"></list-tile> 
+        <list-tile position="g1:h3" heading="Something" color="red" :values="listData"></list-tile>
         <text-tile position="g4:h5" value="Lorem ipsum dolar sit amet consectetur adipiscing elit"></text-tile>
 
         <value-tile position="i1:j2" heading="SNR" color="orange"
           :value="snr" unit="dB">
             <span slot="after">
-                <i class="fa fa-caret-down color--white"></i> <min-value :value="snr"></min-value> &nbsp;|&nbsp; <i class="fa fa-caret-up color--white"></i> <max-value :value="snr"></max-value> &nbsp;|&nbsp; <i class="fa fa-sort color--white"></i> <ema-value :value="snr"></ema-value> 
+                <i class="fa fa-caret-down color--white"></i> <min-value :value="snr"></min-value> &nbsp;|&nbsp; <i class="fa fa-caret-up color--white"></i> <max-value :value="snr"></max-value> &nbsp;|&nbsp; <i class="fa fa-sort color--white"></i> <ema-value :value="snr"></ema-value>
             </span>
         </value-tile>
         <chart-tile position="i3:j5" :data="chartData3" type="doughnut"></chart-tile>
 
         <chart-tile position="a6:f8" heading="Something" color="red" :data="chartData1" type="bar"></chart-tile>
         <chart-tile position="g6:j8" heading="Something" color="blue" :data="chartData1" type="line"></chart-tile>
-        
+
     </dashboard>
 </template>
 
@@ -109,7 +109,7 @@
         created() {
 
             var self = this;
-            
+
             // Temperature
             setInterval(function(){
                 self.temperature = Math.random() * 30;

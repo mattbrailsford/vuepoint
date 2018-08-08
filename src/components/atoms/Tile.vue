@@ -15,10 +15,10 @@
         props: {
             heading: {
                 type: String,
-            }, 
+            },
             position: {
                 type: String,
-            }, 
+            },
             color: {
                 type: String,
                 default: 'default'

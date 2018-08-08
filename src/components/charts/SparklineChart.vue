@@ -2,7 +2,7 @@
     import { Line } from 'vue-chartjs'
 
     const chartOptions = {
-        responsive: true, 
+        responsive: true,
         maintainAspectRatio: false,
 
         layout: {
@@ -39,7 +39,7 @@
             yAxes: [{ display: false }],
             xAxes: [{ display: false }],
         }
-        
+
     }
 
     export default {
@@ -60,7 +60,7 @@
                             data: self.values
                         }
                     ]
-                }, chartOptions); 
+                }, chartOptions);
             }
 
             self.handleResize = function(){

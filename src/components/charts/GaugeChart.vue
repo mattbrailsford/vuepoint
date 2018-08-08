@@ -4,7 +4,7 @@
     import deepAssign from 'deep-assign'
 
     const chartOptions = {
-        responsive: true, 
+        responsive: true,
         maintainAspectRatio: false,
 
         rotation: 0.85 * Math.PI, // 1.1, 0.75
@@ -33,7 +33,7 @@
             enabled: false
         },
         events: []
-        
+
     }
 
     export default {
@@ -41,17 +41,17 @@
         extends: Doughnut,
 
         props: {
-            value:{ 
+            value:{
                 type: Number
-            }, 
+            },
             min: {
                 type: Number,
                 default: 0
-            }, 
+            },
             max: {
                 type: Number,
-                default: 100              
-            }, 
+                default: 100
+            },
             decimalPlaces: {
                 type: Number,
                 default: 0
@@ -61,7 +61,7 @@
             },
             color: {
                 type: String
-            }  
+            }
         },
 
         created() {
@@ -84,7 +84,7 @@
                         onComplete: function(anim){
                             var ctx = anim.animationObject.chart.ctx;
                             var can = anim.animationObject.chart.canvas;
- 
+
                             // Value
                             var fontHeight = can.offsetHeight * (20/100);
                             var x = can.width / 2;
@@ -103,7 +103,7 @@
                             }
                         }
                     }
-                })); 
+                }));
             }
 
             self.handleResize = function(){
